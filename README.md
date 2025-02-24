@@ -1,1 +1,27 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/U2m6YhGg)
+import java.util.ArrayList;
+import java.util.List;
+
+public class AutoBoxingExample {
+    public static void main(String[] args) {
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(10);  
+        numbers.add(20);
+        numbers.add(30);
+        numbers.add(parseStringToInteger("40"));
+        numbers.add(parseStringToInteger("50"));
+        int sum = calculateSum(numbers);
+        System.out.println("Sum of numbers: " + sum);
+    }
+    public static Integer parseStringToInteger(String str) {
+        return Integer.parseInt(str); 
+    }
+    public static int calculateSum(List<Integer> numbers) {
+        int sum = 0;
+        for (Integer num : numbers) {
+            sum += num; 
+        }
+        return sum;
+    }
+}
+
+
